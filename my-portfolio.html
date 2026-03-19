@@ -65,6 +65,14 @@
             <div class="projects-flex">
                 <a href="https://github.com/Dilyaraaa19/CourseProject17/tree/main/src">Мой проект</a>
             </div>
+             <form id="add-project-form" class="project-form">
+        <input type="text" id="title" placeholder="Название проекта" required>
+        <input type="text" id="tech" placeholder="Технологии через запятую" required>
+        <textarea id="description" placeholder="Краткое описание" required></textarea>
+        <input type="number" id="price" placeholder="Цена (руб)" required min="0">
+        <button type="submit">➕ Добавить проект</button>
+    </form>
+    <div id="projects-list" class="projects-grid"></div>
         </section>
 
         <section class="section achievments">
@@ -94,6 +102,25 @@
         </section>
     </main>
 
+     
+<section class="section gallery-section">
+    <h2>📸 Моя галерея</h2>
+    
+     
+    <div class="likes-counter">
+        <strong>❤️ Общих лайков: <span id="total-likes">0</span></strong>
+    </div>
+    
+    
+    <button id="add-image-btn" class="add-btn">➕ Добавить карточку</button>
+    
+     
+    <div id="gallery" class="gallery">
+        
+    </div>
+</section>
+
+
     <footer class="page-footer">
         <section id="my-contacts" class="contacts-flex">
             <div class="contacts-left">
@@ -112,5 +139,6 @@
 
     <h2 class="sticky-title">Спасибо за внимание!</h2>
     <button class="to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+    <script src="addProjects.js"></script>
 </body>
 </html>
