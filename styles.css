@@ -1,0 +1,284 @@
+/* Подключение локального шрифта */
+@font-face {
+    font-family: 'RobotoMono-Regular', sans-serif;
+    src: url('./fonts/RobotoMono-Regular.ttf');
+    font-weight: 400;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Используем Google Fonts из HTML */
+    background-color: #eef1f5;
+    color: #0b0b0b;
+    line-height: 1.6;
+}
+
+/* Шапка */
+.page-header {
+    background-color: #883d72;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.header-content h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.page-header nav a {
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+/* Основной контент */
+.main-info {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Секция "О себе" */
+.about-flex {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.about-flex h2 {
+    color: #2d758b;
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.photo-container img {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.text-container p {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.hidden-details {
+    margin-top: 20px;
+    padding: 10px;
+    background: rgba(62, 141, 206, 0.1);
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.about-flex:hover .hidden-details {
+    opacity: 1;
+}
+
+/* Секции навыков, хобби, проектов */
+.section {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.section h2 {
+    color: #5c2054;
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+/* Навыки */
+.skills-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.skill-item {
+    background: #a344af;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-weight: 500;
+}
+
+.skills-deflist {
+    background: rgba(157, 206, 11, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.skills-deflist dt {
+    font-weight: bold;
+    color: #b14688;
+    margin-bottom: 10px;
+}
+
+/* Хобби */
+.section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.section ul li {
+    padding: 10px 0;
+    font-size: 16px;
+}
+
+.section ul li:before {
+    content: "⭐ ";
+    font-size: 18px;
+}
+
+/* Проекты */
+.projects-flex a {
+    display: inline-block;
+    background: #d632a5;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: transform 0.3s;
+}
+
+.projects-flex a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(50, 126, 170, 0.4);
+}
+
+/* Достижения */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+caption {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #883066;
+}
+
+th, td {
+    border: 2px solid #ddd;
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #e5e7eb;
+    color: #c43b5d;
+    font-weight: bold;
+}
+
+/* Футер */
+.page-footer {
+    background-color: #a8336e;
+    color: white;
+    padding: 40px 20px 20px;
+    margin-top: 50px;
+}
+
+.contacts-flex {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.contacts-left h3,
+.contacts-right p {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.contacts-left ol {
+    list-style: none;
+    padding: 0;
+}
+
+.contacts-left ol li {
+    margin-bottom: 10px;
+}
+
+.page-footer a {
+    color: #cf59d3;
+    font-weight: 500;
+}
+
+.page-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Sticky заголовок и кнопка наверх */
+.sticky-title {
+    position: sticky;
+    top: 0;
+    background: #3967ac;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 24px;
+    z-index: 100;
+    margin: 0;
+}
+
+.to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #41569c;
+    color: white;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: all 0.3s;
+}
+
+.to-top:hover {
+    transform: scale(1.1);
+    background: #3172af;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .contacts-flex {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
