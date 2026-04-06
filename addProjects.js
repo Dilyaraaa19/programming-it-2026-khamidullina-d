@@ -51,7 +51,7 @@ function renderProjects() {
         
         card.innerHTML = `
             <h3>${project.title}</h3>
-            <div class="project-price">💰 ${project.price.toLocaleString()}₽</div>
+            <div class="project-price">💸 ${project.price.toLocaleString()}₽</div>
             <div class="project-tech">${project.skills.join(' • ')}</div>
             <p>${project.description}</p>
         `

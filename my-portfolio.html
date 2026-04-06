@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -22,7 +21,7 @@
         </div>
     </header>
 
-    <main class="main-info"> <!-- добавил класс -->
+    <main class="main-info">  
         <section class="about-flex">
             <h2>О себе</h2>
             <div class="about-grid">
@@ -48,7 +47,7 @@
             </div>
             <dl class="skills-deflist">
                 <dt>Планы:</dt>
-                <dd>React, Node.js, PostgreSQL</dd>
+                <dd>Создать сайт компьютерного клуба</dd>
             </dl>
         </section>
 
@@ -103,22 +102,40 @@
     </main>
 
      
-<section class="section gallery-section">
-    <h2>📸 Моя галерея</h2>
-    
-     
-    <div class="likes-counter">
-        <strong>❤️ Общих лайков: <span id="total-likes">0</span></strong>
-    </div>
-    
-    
-    <button id="add-image-btn" class="add-btn">➕ Добавить карточку</button>
-    
-     
-    <div id="gallery" class="gallery">
-        
-    </div>
-</section>
+<div class="likes-counter">
+    <strong>❤️ Общих лайков: <span id="total-likes">0</span></strong>
+</div>
+<button id="add-image-btn" class="add-btn">➕ Добавить карточку</button>
+<div id="gallery" class="gallery">
+</div>
+
+<section class="contacts-form">
+            <h2 class="section-header">Связаться со мной</h2>
+            <form id="contact-form" class="contact-form">
+                <fieldset class="contact-form_fieldset">
+                    <div class="field">
+                        <label for="name">Как к вам обращаться?</label>
+                        <input type="text" id="name" name="name" placeholder="Ваше имя" autocomplete="name" required>
+                    </div>
+                    <div class="field">
+                        <label for="name">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="example@mail.com" 
+                            pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                    </div>
+                    <div class="field">
+                        <label for="phone">Телефон:</label>
+                        <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="">
+                    </div>
+                    <div class="field">
+                        <label for="message">Сообщение:</label>
+                        <textarea type="text" id="message" name="message" rows="6" placeholder="" required ></textarea>
+                    </div>
+                    <button type="submit">Отправить</button>
+                </fieldset>
+                <div class="contact-form_sending-result hidden"></div>
+            </form>
+        </section>
+    </main>
 
 
     <footer class="page-footer">
@@ -140,5 +157,9 @@
     <h2 class="sticky-title">Спасибо за внимание!</h2>
     <button class="to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
     <script src="addProjects.js"></script>
+    <script src="gallery.js"></script>
+    <script src="cli-projects.js"></script>
+    <script src="tasksManager.js"></script>
+    <script src="sendForm.js"></script>
 </body>
 </html>
