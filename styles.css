@@ -1,4 +1,4 @@
-/* Подключение локального шрифта */
+
 @font-face {
     font-family: 'RobotoMono-Regular', sans-serif;
     src: url('./fonts/RobotoMono-Regular.ttf');
@@ -12,13 +12,12 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif; /* Используем Google Fonts из HTML */
+    font-family: 'Roboto', sans-serif;
     background-color: #eef1f5;
     color: #0b0b0b;
     line-height: 1.6;
 }
 
-/* Шапка */
 .page-header {
     background-color: #883d72;
     color: white;
@@ -37,14 +36,12 @@ body {
     font-size: 18px;
 }
 
-/* Основной контент */
 .main-info {
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Секция "О себе" */
 .about-flex {
     background: rgba(255, 255, 255, 0.8);
     padding: 30px;
@@ -79,20 +76,7 @@ body {
     font-size: 16px;
 }
 
-.hidden-details {
-    margin-top: 20px;
-    padding: 10px;
-    background: rgba(62, 141, 206, 0.1);
-    border-radius: 8px;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
 
-.about-flex:hover .hidden-details {
-    opacity: 1;
-}
-
-/* Секции навыков, хобби, проектов */
 .section {
     background: rgba(255, 255, 255, 0.8);
     padding: 30px;
@@ -487,3 +471,122 @@ th {
     }
 }
 
+/* Форма контактов */
+#contact-form {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    max-width: 500px;
+    margin: 0 auto 30px;
+}
+
+.field {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #2d758b;
+    font-size: 16px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.95);
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    outline: none;
+    border-color: #9dce0b;
+    box-shadow: 0 0 0 3px rgba(157, 206, 11, 0.1);
+    transform: translateY(-2px);
+}
+
+#message {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Кнопка отправки */
+#contact-form button[type="submit"] {
+    background: linear-gradient(135deg, #9dce0b, #7bb509);
+    color: white;
+    padding: 18px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(157, 206, 11, 0.3);
+}
+
+#contact-form button[type="submit"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(157, 206, 11, 0.4);
+    background: linear-gradient(135deg, #7bb509, #5fa307);
+}
+
+#contact-form button[type="submit"]:active {
+    transform: translateY(-1px);
+}
+
+/* Результат отправки формы */
+.contact-form_sending-result {
+    margin-top: 20px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s ease;
+    min-height: 20px;
+}
+
+.contact-form_sending-result.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.contact-form_sending-result.errorText {
+    background: rgba(244, 67, 54, 0.1);
+    color: #f44336;
+    border: 2px solid rgba(244, 67, 54, 0.3);
+}
+
+.contact-form_sending-result:not(.errorText) {
+    background: rgba(157, 206, 11, 0.1);
+    color: #173e07;
+    border: 2px solid rgba(157, 206, 11, 0.3);
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    #contact-form {
+        padding: 20px;
+        margin: 20px;
+    }
+    
+    .contact-form_sending-result {
+        font-size: 15px;
+        padding: 12px 15px;
+    }
+}
