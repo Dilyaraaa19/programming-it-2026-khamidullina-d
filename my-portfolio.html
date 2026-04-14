@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио Диляры</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="page-header">
+        <div class="header-content">
+            <h1>Диляра Хамидуллина</h1>
+            <nav>
+                <a href="#my-contacts">79370029175</a>
+                <a href="mailto:dilyarka00@mail.ru">dilyarka00@mail.ru</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-info">  
+        <section class="about-flex">
+            <h2>О себе</h2>
+            <div class="about-grid">
+                <div class="photo-container">
+            <img src="images/photo_2026-02-26_16-08-55.jpg" width="200" height="250" alt="Фото Хамидуллина Диляра">
+            </div>
+            <div class="text-container">
+                 <p>Меня зовут Диляра, я <b>начинающий программист</b>, мои контакты можете посмотреть <a href="#my-contacts">тут</a>.</p>
+                    <p>В <u>свободное</u> время я <i>танцую</i>.</p>
+                    <p>Моя любимая цитата: <em><mark>Никогда не сдавайся</mark></em></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section skills">
+            <h2>Мои навыки</h2>
+            <div class="skills-flex">
+                <div class="skill-item"><strong>JavaScript</strong> — базовый уровень</div>
+                <div class="skill-item"><strong>MySQL</strong> — базы данных</div>
+                <div class="skill-item"><strong>VSCode</strong> — редактор кода</div>
+                <div class="skill-item"><strong>Git/GitHub</strong> — версионность</div>
+            </div>
+            <dl class="skills-deflist">
+                <dt>Планы:</dt>
+                <dd>Создать сайт компьютерного клуба</dd>
+            </dl>
+        </section>
+
+        <section class="section hobbies">
+            <h2>Хобби</h2>
+            <ul>
+                <li>Танцы и картины по номерам</li>
+                <li>Просмотр сериалов</li>
+            </ul>
+        </section>
+
+        <section class="section projects">
+            <h2>Проекты</h2>
+            <div class="projects-flex">
+                <a href="https://github.com/Dilyaraaa19/CourseProject17/tree/main/src">Мой проект</a>
+            </div>
+             <form id="add-project-form" class="project-form">
+        <input type="text" id="title" placeholder="Название проекта" required>
+        <input type="text" id="tech" placeholder="Технологии через запятую" required>
+        <textarea id="description" placeholder="Краткое описание" required></textarea>
+        <input type="number" id="price" placeholder="Цена (руб)" required min="0">
+        <button type="submit">➕ Добавить проект</button>
+    </form>
+    <div id="projects-list" class="projects-grid"></div>
+        </section>
+
+        <section class="section achievments">
+            <table>
+                <caption><h4>Мои достижения</h4></caption>
+                <thead>
+                    <tr>
+                        <th>Название достижения</th>
+                        <th>Год</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Закончила школу с медалью</td>
+                        <td>2024</td>
+                    </tr>
+                    <tr>
+                        <td>Закончила художественную школу</td>
+                        <td>2020</td>
+                    </tr>
+                    <tr>
+                        <td>Обучаюсь программированию</td>
+                        <td>2026</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+     
+<div class="likes-counter">
+    <strong>❤️ Общих лайков: <span id="total-likes">0</span></strong>
+</div>
+<button id="add-image-btn" class="add-btn">➕ Добавить карточку</button>
+<div id="gallery" class="gallery">
+</div>
+
+<section class="contacts-form">
+            <h2 class="section-header">Связаться со мной</h2>
+            <form id="contact-form" class="contact-form">
+                <fieldset class="contact-form_fieldset">
+                    <div class="field">
+                        <label for="name">Как к вам обращаться?</label>
+                        <input type="text" id="name" name="name" placeholder="Ваше имя" autocomplete="name" required>
+                    </div>
+                    <div class="field">
+                        <label for="name">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="example@mail.com" 
+                            pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                    </div>
+                    <div class="field">
+                        <label for="phone">Телефон:</label>
+                        <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="">
+                    </div>
+                    <div class="field">
+                        <label for="message">Сообщение:</label>
+                        <textarea type="text" id="message" name="message" rows="6" placeholder="" required ></textarea>
+                    </div>
+                    <button type="submit">Отправить</button>
+                </fieldset>
+                <div class="contact-form_sending-result hidden"></div>
+            </form>
+        </section>
+    </main>
+
+
+    <footer class="page-footer">
+        <section id="my-contacts" class="contacts-flex">
+            <div class="contacts-left">
+                <h3>Контакты:</h3>
+                <ol>
+                    <li><a href="mailto:dilyarka00@mail.ru">dilyarka00@mail.ru</a></li>
+                    <li><a href="tel:+79370029175">+7 (937) 002-91-75</a></li>
+                </ol>
+            </div>
+            <div class="contacts-right">
+                <p>GitHub: <a href="https://github.com/Dilyaraaa19">@Dilyaraaa19</a></p>
+            </div>
+        </section>
+        <p>&copy; 2026 Хамидуллина Диляра. Все права защищены.</p>
+    </footer>
+
+    <h2 class="sticky-title">Спасибо за внимание!</h2>
+    <button class="to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+    <script src="addProjects.js"></script>
+    <script src="gallery.js"></script>
+    <script src="cli-projects.js"></script>
+    <script src="tasksManager.js"></script>
+    <script src="sendForm.js"></script>
+</body>
+</html>
