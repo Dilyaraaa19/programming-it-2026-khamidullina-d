@@ -1,0 +1,24 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #3f0235;     
+  margin: 0;
+  padding: 20px;
+}
+.post-card {
+  border: 1px solid #ccc;
+  margin: 8px 0;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.post-card h3 {
+  margin: 0 0 8px 0;
+}
+
+.loader {
+  color: #dd67c0;
+}
+
+.error {
+  color: rgb(180, 59, 59);
+}
