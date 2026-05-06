@@ -22,13 +22,13 @@ function memoizedSumOfDigits() {
 }
 
 console.log("=== Обычная рекурсия (каждый вызов пересчитывает всё заново) ===");
-console.log("sumOfDigits(123):", sumOfDigits(123));
-console.log("sumOfDigits(123):", sumOfDigits(123));
+console.log("sumOfDigits(123):", sumOfDigits(1903));
+console.log("sumOfDigits(123):", sumOfDigits(1903));
 
 console.log("\n=== Мемоизированная версия (кэш + счётчик) ===");
 const memoSum = memoizedSumOfDigits();
-console.log("memoSum(123):", memoSum(123));
-console.log("memoSum(123):", memoSum(123));
-console.log("memoSum(98765):", memoSum(98765));
+console.log("memoSum(123):", memoSum(1903));
+console.log("memoSum(123):", memoSum(1903));
+console.log("memoSum(98765):", memoSum(26789));
 console.log("memoSum(10):", memoSum(10));
 console.log("memoSum(0):", memoSum(0));
